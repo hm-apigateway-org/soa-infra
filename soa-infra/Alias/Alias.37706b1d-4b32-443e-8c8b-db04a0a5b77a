@@ -1,0 +1,9 @@
+{
+  "id" : "37706b1d-4b32-443e-8c8b-db04a0a5b77a",
+  "name" : "AUTH-MSR",
+  "description" : "AUTH:MSR",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "Basic QWRtaW5pc3RyYXRvcjptYW5hZ2U=",
+  "_docType" : "aliases"
+}

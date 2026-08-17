@@ -1,0 +1,9 @@
+{
+  "id" : "cdf92072-97d8-4af4-8fbc-f2779ffae587",
+  "name" : "ERROR-AUTHORIZATION",
+  "description" : "401: APIGW  ERROR AUTHORIZATION",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "{     \"responseCode\": \"401\", \"responseMessage\": \"Unauthorized application request\" }",
+  "_docType" : "aliases"
+}

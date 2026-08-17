@@ -1,0 +1,8 @@
+{
+  "id" : "32d4c255-5c74-48b3-a84b-9b43f7eadf25",
+  "name" : "soa-infra-url",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "http://10.129.2.213:4444/invoke/PGNMandiriH2h.services:",
+  "_docType" : "aliases"
+}

@@ -1,0 +1,62 @@
+{
+  "id" : "0de33d67-afb8-484b-95f1-01f60694dfa7",
+  "names" : [ {
+    "value" : "Conditional Error Processing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "conditionalErrorProcessing",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    }, {
+      "templateKey" : "transformationCondition",
+      "parameters" : [ {
+        "templateKey" : "transformationVariable",
+        "values" : [ "${ERROR_MESSAGE}" ]
+      }, {
+        "templateKey" : "transformationConditionOperator",
+        "values" : [ "contains" ]
+      }, {
+        "templateKey" : "transformationConditionValue",
+        "values" : [ "Unauthorized application request" ]
+      } ]
+    } ]
+  }, {
+    "templateKey" : "errorTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "restHeaderTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${request.headers.correlationID}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${request.correlationID}" ]
+        } ]
+      } ]
+    }, {
+      "templateKey" : "customFailureMessages",
+      "parameters" : [ {
+        "templateKey" : "sendNativeProviderFault",
+        "values" : [ "false" ]
+      }, {
+        "templateKey" : "failureMessage",
+        "parameters" : [ {
+          "templateKey" : "contentType",
+          "values" : [ "json" ]
+        }, {
+          "templateKey" : "errortemplate",
+          "values" : [ "${ERROR-AUTHORIZATION}" ]
+        }, {
+          "templateKey" : "useAsDefault",
+          "values" : [ "true" ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}

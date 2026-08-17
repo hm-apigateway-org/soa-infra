@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="11.1" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildTimestamp" value="2026-08-11T06:05:08"/>
+    <asset name="API.fc56e549-7351-4007-9ef8-c559b8ca5379" displayName="soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.d254d40a-11b3-44f1-ad3f-155e5a06edf8</dependsOn>
+        <dependsOn>APIGateway:Policy.18fdb4b1-0088-40f2-ac9b-9226dca9b081</dependsOn>
+    </asset>
+    <asset name="Policy.18fdb4b1-0088-40f2-ac9b-9226dca9b081" displayName="Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.0de33d67-afb8-484b-95f1-01f60694dfa7</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.20a9f926-6e0c-419d-9782-4c7a8cdd09ce</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.29182a1e-d455-4857-a11b-0c0b81b21cc6</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.44cc951c-1e97-4723-8d28-764b1b655896</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.519b8d20-ca92-45cb-8900-ff27052ea1f8</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.5b933e36-78d9-48d8-aa91-3c95eef7fde5</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.6af172b6-9b42-4bc8-8ccc-16719ac8e804</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.863894ee-f7a5-43ad-b38a-52f823817475</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.9f5b5819-967a-44a7-b9cd-640fddefb784</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.b4ccbac1-bc61-4dbc-ac52-05415a59cc91</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.bac34fd3-70d6-41c7-bb98-082a7cb153ff</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.c2dbf94a-f615-493a-8fec-6e161c519839</dependsOn>
+    </asset>
+    <asset name="PolicyAction.44cc951c-1e97-4723-8d28-764b1b655896" displayName="Policy Action [Request Transformation] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.37706b1d-4b32-443e-8c8b-db04a0a5b77a</dependsOn>
+    </asset>
+    <asset name="Alias.37706b1d-4b32-443e-8c8b-db04a0a5b77a" displayName="AUTH-MSR" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias AUTH-MSR" many="false" isSecure="false" displayName="value for Simple alias AUTH-MSR">
+            <value>Basic QWRtaW5pc3RyYXRvcjptYW5hZ2U=</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.29182a1e-d455-4857-a11b-0c0b81b21cc6" displayName="Policy Action [Conditional Routing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.32d4c255-5c74-48b3-a84b-9b43f7eadf25</dependsOn>
+    </asset>
+    <asset name="Alias.32d4c255-5c74-48b3-a84b-9b43f7eadf25" displayName="soa-infra-url" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias soa-infra-url" many="false" isSecure="false" displayName="value for Simple alias soa-infra-url">
+            <value>http://10.129.2.213:4444/invoke/PGNMandiriH2h.services:</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.20a9f926-6e0c-419d-9782-4c7a8cdd09ce" displayName="Policy Action [Identify &amp; Authorize] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.9f5b5819-967a-44a7-b9cd-640fddefb784" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.0b118d44-208a-44fd-b448-f0106bb7b3ca</dependsOn>
+    </asset>
+    <asset name="Alias.0b118d44-208a-44fd-b448-f0106bb7b3ca" displayName="ERROR-INVALID-INPUT" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias ERROR-INVALID-INPUT" many="false" isSecure="false" displayName="value for Simple alias ERROR-INVALID-INPUT">
+            <value>{"responseCode": "400","responseMessage": "Invalid input parameter or request format"}</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.b4ccbac1-bc61-4dbc-ac52-05415a59cc91" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.fc2af04a-6fbe-48ec-a733-b63568d5bc2b</dependsOn>
+    </asset>
+    <asset name="Alias.fc2af04a-6fbe-48ec-a733-b63568d5bc2b" displayName="APIGW-RESOURCE" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias APIGW-RESOURCE" many="false" isSecure="false" displayName="value for Simple alias APIGW-RESOURCE">
+            <value>{ "responseCode": "404", "responseMessage": "Requested endpoint not found" }</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.c2dbf94a-f615-493a-8fec-6e161c519839" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.7d0f1bc4-0003-4233-b1e7-1df574e796aa</dependsOn>
+    </asset>
+    <asset name="Alias.7d0f1bc4-0003-4233-b1e7-1df574e796aa" displayName="ERROR-HTTP-METHOD" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias ERROR-HTTP-METHOD" many="false" isSecure="false" displayName="value for Simple alias ERROR-HTTP-METHOD">
+            <value>{"responseCode": "405","responseMessage": "HTTP method not allowed for this endpoint"}</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.0de33d67-afb8-484b-95f1-01f60694dfa7" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.cdf92072-97d8-4af4-8fbc-f2779ffae587</dependsOn>
+    </asset>
+    <asset name="Alias.cdf92072-97d8-4af4-8fbc-f2779ffae587" displayName="ERROR-AUTHORIZATION" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias ERROR-AUTHORIZATION" many="false" isSecure="false" displayName="value for Simple alias ERROR-AUTHORIZATION">
+            <value>{     "responseCode": "401", "responseMessage": "Unauthorized application request" }</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.bac34fd3-70d6-41c7-bb98-082a7cb153ff" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.61308b43-45a9-4a73-98cf-5366434652cf</dependsOn>
+    </asset>
+    <asset name="Alias.61308b43-45a9-4a73-98cf-5366434652cf" displayName="ROUTE-DOWNTIME" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias ROUTE-DOWNTIME" many="false" isSecure="false" displayName="value for Simple alias ROUTE-DOWNTIME">
+            <value>{ "responseCode":"500", "responseMessage":"Native target Exception" }</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.5b933e36-78d9-48d8-aa91-3c95eef7fde5" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.519b8d20-ca92-45cb-8900-ff27052ea1f8" displayName="Policy Action [Conditional Error Processing] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.6af172b6-9b42-4bc8-8ccc-16719ac8e804" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.863894ee-f7a5-43ad-b38a-52f823817475" displayName="Policy Action [Response Transformation] -&gt; Policy For API soa-infra[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.d254d40a-11b3-44f1-ad3f-155e5a06edf8" displayName="AccessControlList for asset : soa-infra" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.accessProfiles_Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.accessProfiles_Default</dependsOn>
+    </asset>
+    <asset name="AccessProfile.accessProfiles_Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+    </asset>
+    <asset name="AccessProfile.accessProfiles_Default" displayName="Default" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+    </asset>
+</asset_composite>

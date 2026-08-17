@@ -1,0 +1,53 @@
+{
+  "id" : "29182a1e-d455-4857-a11b-0c0b81b21cc6",
+  "names" : [ {
+    "value" : "Conditional Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "contextBasedRouting",
+  "parameters" : [ {
+    "templateKey" : "routeTo",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "${soa-infra-url}" ]
+    }, {
+      "templateKey" : "method",
+      "values" : [ "CUSTOM" ]
+    } ]
+  }, {
+    "templateKey" : "contextRules",
+    "parameters" : [ {
+      "templateKey" : "name",
+      "values" : [ "/resources/Popay/Mandiri_H2H_Status!1.0/H2H_API/get_status" ]
+    }, {
+      "templateKey" : "transformationConditions",
+      "parameters" : [ {
+        "templateKey" : "logicalConnector",
+        "values" : [ "OR" ]
+      }, {
+        "templateKey" : "transformationCondition",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${operationName}" ]
+        }, {
+          "templateKey" : "transformationConditionOperator",
+          "values" : [ "equals" ]
+        }, {
+          "templateKey" : "transformationConditionValue",
+          "values" : [ "/resources/Popay/Mandiri_H2H_Status!1.0/H2H_API/get_status" ]
+        } ]
+      } ]
+    }, {
+      "templateKey" : "routeTo",
+      "parameters" : [ {
+        "templateKey" : "endpointUri",
+        "values" : [ "${soa-infra-url}getStatus" ]
+      }, {
+        "templateKey" : "method",
+        "values" : [ "CUSTOM" ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}

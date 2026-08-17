@@ -1,0 +1,9 @@
+{
+  "id" : "0b118d44-208a-44fd-b448-f0106bb7b3ca",
+  "name" : "ERROR-INVALID-INPUT",
+  "description" : "400: APIGW ERROR INVALID INPUT",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "{\"responseCode\": \"400\",\"responseMessage\": \"Invalid input parameter or request format\"}",
+  "_docType" : "aliases"
+}

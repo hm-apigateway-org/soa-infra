@@ -1,0 +1,56 @@
+{
+  "id" : "44cc951c-1e97-4723-8d28-764b1b655896",
+  "names" : [ {
+    "value" : "Request Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "requestTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    }, {
+      "templateKey" : "transformationCondition",
+      "parameters" : [ {
+        "templateKey" : "transformationVariable",
+        "values" : [ "${operationName}" ]
+      }, {
+        "templateKey" : "transformationConditionOperator",
+        "values" : [ "equals" ]
+      }, {
+        "templateKey" : "transformationConditionValue",
+        "values" : [ "/resources/Popay/Mandiri_H2H_Status!1.0/H2H_API/get_status" ]
+      } ]
+    } ]
+  }, {
+    "templateKey" : "requestTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "commonTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${request.headers.Authorization}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${AUTH-MSR}" ]
+        } ]
+      } ]
+    }, {
+      "templateKey" : "methodTransformation",
+      "parameters" : [ {
+        "templateKey" : "method",
+        "values" : [ "CUSTOM" ]
+      } ]
+    }, {
+      "templateKey" : "payloadTransformation",
+      "parameters" : [ {
+        "templateKey" : "payload",
+        "values" : [ "{\r\n  \"request\": ${request.payload}\r\n}" ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}

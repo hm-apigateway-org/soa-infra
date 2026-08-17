@@ -1,0 +1,9 @@
+{
+  "id" : "61308b43-45a9-4a73-98cf-5366434652cf",
+  "name" : "ROUTE-DOWNTIME",
+  "description" : "500: Native target Exception",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "{ \"responseCode\":\"500\", \"responseMessage\":\"Native target Exception\" }",
+  "_docType" : "aliases"
+}

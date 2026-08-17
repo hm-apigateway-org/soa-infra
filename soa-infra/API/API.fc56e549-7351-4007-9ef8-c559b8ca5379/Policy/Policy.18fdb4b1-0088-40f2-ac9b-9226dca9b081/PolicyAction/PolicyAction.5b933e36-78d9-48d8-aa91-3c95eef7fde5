@@ -1,0 +1,59 @@
+{
+  "id" : "5b933e36-78d9-48d8-aa91-3c95eef7fde5",
+  "names" : [ {
+    "value" : "Conditional Error Processing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "conditionalErrorProcessing",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    }, {
+      "templateKey" : "transformationCondition",
+      "parameters" : [ {
+        "templateKey" : "transformationVariable",
+        "values" : [ "${ERROR_MESSAGE}" ]
+      }, {
+        "templateKey" : "transformationConditionOperator",
+        "values" : [ "contains" ]
+      }, {
+        "templateKey" : "transformationConditionValue",
+        "values" : [ "X-TIMESTAMP is mandatory" ]
+      } ]
+    } ]
+  }, {
+    "templateKey" : "errorTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "customFailureMessages",
+      "parameters" : [ {
+        "templateKey" : "sendNativeProviderFault",
+        "values" : [ "false" ]
+      }, {
+        "templateKey" : "failureMessage",
+        "parameters" : [ {
+          "templateKey" : "contentType",
+          "values" : [ "json" ]
+        }, {
+          "templateKey" : "errortemplate",
+          "values" : [ "{\r\n    \"responseCode\":\"400\",\r\n    \"responseMessage\":\"X-TIMESTAMP is mandatory\"\r\n}" ]
+        }, {
+          "templateKey" : "useAsDefault",
+          "values" : [ "true" ]
+        } ]
+      } ]
+    }, {
+      "templateKey" : "statusTransformation",
+      "parameters" : [ {
+        "templateKey" : "statusCodeOptional",
+        "values" : [ "400" ]
+      }, {
+        "templateKey" : "statusMessage",
+        "values" : [ "Bad Request" ]
+      } ]
+    } ]
+  } ],
+  "active" : false,
+  "_docType" : "policyactions"
+}

@@ -1,0 +1,76 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "soa-infra"
+    },
+    "basePath" : "",
+    "serviceRegistryDisplayName" : "soa-infra_1.0",
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/resources/Popay/Mandiri_H2H_Status!1.0/H2H_API/get_status" : {
+        "post" : {
+          "parameters" : [ ],
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "scopes" : [ ],
+        "displayName" : "/resources/Popay/Mandiri_H2H_Status!1.0/H2H_API/get_status",
+        "description" : "/resources/Popay/Mandiri_H2H_Status!1.0/H2H_API/get_status",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://localhost:5555",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://localhost:5555",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "soa-infra",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "18fdb4b1-0088-40f2-ac9b-9226dca9b081" ],
+  "tracingEnabled" : false,
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2026-08-06 07:59:59 GMT",
+  "lastModified" : "2026-08-06 09:15:39 GMT",
+  "systemVersion" : 1,
+  "gatewayEndpoints" : { },
+  "deployments" : [ "APIGateway" ],
+  "id" : "fc56e549-7351-4007-9ef8-c559b8ca5379",
+  "_docType" : "apis"
+}

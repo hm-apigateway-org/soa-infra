@@ -1,0 +1,74 @@
+{
+  "id" : "18fdb4b1-0088-40f2-ac9b-9226dca9b081",
+  "names" : [ {
+    "value" : "Default Policy for API soa-infra",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "44cc951c-1e97-4723-8d28-764b1b655896",
+      "order" : "0"
+    } ],
+    "stageKey" : "requestPayloadProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "29182a1e-d455-4857-a11b-0c0b81b21cc6",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "20a9f926-6e0c-419d-9782-4c7a8cdd09ce",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "9f5b5819-967a-44a7-b9cd-640fddefb784",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "b4ccbac1-bc61-4dbc-ac52-05415a59cc91",
+      "order" : "1"
+    }, {
+      "enforcementObjectId" : "c2dbf94a-f615-493a-8fec-6e161c519839",
+      "order" : "2"
+    }, {
+      "enforcementObjectId" : "0de33d67-afb8-484b-95f1-01f60694dfa7",
+      "order" : "3"
+    }, {
+      "enforcementObjectId" : "bac34fd3-70d6-41c7-bb98-082a7cb153ff",
+      "order" : "4"
+    }, {
+      "enforcementObjectId" : "5b933e36-78d9-48d8-aa91-3c95eef7fde5",
+      "order" : "5"
+    }, {
+      "enforcementObjectId" : "519b8d20-ca92-45cb-8900-ff27052ea1f8",
+      "order" : "6"
+    } ],
+    "stageKey" : "responseFaultProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "6af172b6-9b42-4bc8-8ccc-16719ac8e804",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "863894ee-f7a5-43ad-b38a-52f823817475",
+      "order" : "0"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "global" : false,
+  "active" : false,
+  "systemPolicy" : false,
+  "_docType" : "policy"
+}

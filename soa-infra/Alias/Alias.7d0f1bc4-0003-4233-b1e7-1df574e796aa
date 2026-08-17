@@ -1,0 +1,9 @@
+{
+  "id" : "7d0f1bc4-0003-4233-b1e7-1df574e796aa",
+  "name" : "ERROR-HTTP-METHOD",
+  "description" : "405: APIGW  ERROR HTTP METHOD",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "{\"responseCode\": \"405\",\"responseMessage\": \"HTTP method not allowed for this endpoint\"}",
+  "_docType" : "aliases"
+}

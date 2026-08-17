@@ -1,0 +1,9 @@
+{
+  "id" : "fc2af04a-6fbe-48ec-a733-b63568d5bc2b",
+  "name" : "APIGW-RESOURCE",
+  "description" : "404:APIGW ENDPOINT NOT FOUND",
+  "type" : "simple",
+  "owner" : "Administrator",
+  "value" : "{ \"responseCode\": \"404\", \"responseMessage\": \"Requested endpoint not found\" }",
+  "_docType" : "aliases"
+}
